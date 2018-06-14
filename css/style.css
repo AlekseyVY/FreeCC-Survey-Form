@@ -1,8 +1,44 @@
-#mainCont {
+body {
     background-color: gray;
 }
-#secondCont {
+
+#container {
     background-color: white;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#mainTitle {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#description {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+}
+
+#mainDescription {
+    justify-content: center;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+#label {
+    text-align: right;
+}
+
+
+
+
+
+
+
+#button {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
 }
