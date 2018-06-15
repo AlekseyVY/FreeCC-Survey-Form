@@ -10,11 +10,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 
   <title>Survey Form</title>
 </head>
 
 <body>
+    <form action="/js/main.js" id="survey-form" target="_blank">
   <div id="mainTitle">
     <h1 id="title">Survey Form</h1>
   </div>
@@ -22,45 +24,38 @@
     <div class="row" id="mainDescription">
       <p id="description">Let us know how we can improve freeCodeCamp</p>
     </div>
-    <form action="" id="survey-form">
       <div class="row">
-        <div class="col-6" id="label">
-          <label for="">
-            <p id="description">Name: </p>
-          </label>
+        <div class="col-6 label" id="label">
+            <label id="name-label">Name:</label> 
         </div>
         <div class="col-6">
-          <input type="text" name="name" id="name-label" placeholder="Enter your name">
+          <input type="text" name="Name" id="name" placeholder="Enter your name" required>
         </div>
       </div>
       <div class="row">
-        <div class="col-6" id="label">
-          <label for="">
-            <p id="description"> E-mail: </p>
-          </label>
+        <div class="col-6 label">
+             <label id="email-label">E-mail:</label>
         </div>
         <div class="col-6">
-          <input type="email" name="" id="email-label" placeholder="Enter your Email">
+          <input type="email" name="email" id="email" placeholder="Enter your Email" required>
         </div>
       </div>
       <div class="row">
-        <div class="col-6" id="label">
-          <label for="age">
-            <p id="description"> Age: </p>
-          </label>
+        <div class="col-6 label">
+           <label id="number-label">Age:</label>
         </div>
         <div class="col-6">
-          <input type="number" name="age" id="number-label" max="100" placeholder="Age">
+          <input type="number" name="age" id="number" min="0 " max="125" placeholder="Age" required>
         </div>
       </div>
       <div class="row">
-        <div class="col-6" id="label">
-          <label for="">
-            <p>Which option best describes your current role?</p>
-          </label>
+        <div class="col-6 label">
+          <p>
+            Which option best describes your current role?
+          </p>
         </div>
         <div class="col-6">
-          <select name="" id="dropdown">
+          <select name="dropdown" id="dropdown">
             <option value="select_an_option" selected disabled>Select an option</option>
             <option value="student">Student</option>
             <option value="full_time_job">Full Time Job</option>
@@ -71,34 +66,36 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-6" id="label">
-          <label for="">
-            <p>How likely is that you would recommend
+        <div class="col-6 label">
+          <!--<label for="radio1">-->
+            <p>likely is that you would recommend
               <br> freeCodeCamp to a friend?</p>
-          </label>
+          <!--</label>-->
         </div>
         <div class="col-6">
-          <label for="">
-            <input type="radio" name="" id=""> Definitely
+          <fieldset id="radio-btn">
+          <label for="radio1">
+            <input type="radio" value="a1" name="radio" id="radio1"> Definitely
           </label>
           <br>
-          <label for="">
-            <input type="radio" name="" id=""> Maybe
+          <label for="radio2">
+            <input type="radio" value="a2" name="radio" id="radio2"> Maybe
           </label>
           <br>
-          <label for="">
-            <input type="radio" name="" id=""> Not sure
+          <label for="radio3">
+            <input type="radio" value="a3" name="radio" id="radio3"> Not sure
           </label>
+          </fieldset>
         </div>
       </div>
       <div class="row">
-        <div class="col-6" id="label">
-          <label for="">
-            <p>What do you like most in FCC:</p>
-          </label>
+        <div class="col-6 label">
+          <p>
+            What do you like most in FCC:
+            </p>
         </div>
         <div class="col-6">
-          <select name="" id="dropdown">
+          <select name="dropdown2" id="dropdown2">
             <option value="select_an_option" selected disabled>Select an option</option>
             <option value="challenges">Challenges</option>
             <option value="projects">Projects</option>
@@ -108,72 +105,77 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-6" id="label">
-          <label for=""> Things that should be improved in the future
-            <br> (Check all that apply):</label>
+        <div class="col-6 label">
+          <p>
+             Things that should be improved in the future
+            <br> (Check all that apply):
+            </p>
         </div>
         <div class="col-6">
-          <label for="">
-            <input type="checkbox" name="" id=""> Front-end Projects
+          <fieldset id="check-btn">
+          <label for="check1">
+            <input type="checkbox" name="check1" id="check1" value="Front-end_Projects"> Front-end Projects
           </label>
           <br>
-          <label for="">
-            <input type="checkbox" name="" id=""> Back-end Projects
+          <label for="check2">
+            <input type="checkbox" name="check2" id="check2" value="Back-end_Projects"> Back-end Projects
           </label>
           <br>
-          <label for="">
-            <input type="checkbox" name="" id=""> Data Visualization
+          <label for="check3">
+            <input type="checkbox" name="check3" id="check3" value="Data_Visualization"> Data Visualization
           </label>
           <br>
-          <label for="">
-            <input type="checkbox" name="" id=""> Challenges
+          <label for="check4">
+            <input type="checkbox" name="check4" id="check4" value="Challenges"> Challenges
           </label>
           <br>
-          <label for="">
-            <input type="checkbox" name="" id=""> Open Source Community
+          <label for="check5">
+            <input type="checkbox" name="check5" id="check5" value="Open_Source_Community"> Open Source Community
           </label>
           <br>
-          <label for="">
-            <input type="checkbox" name="" id=""> Gitter help rooms
+          <label for="check6">
+            <input type="checkbox" name="check6" id="check6" value="Gitter_help_rooms"> Gitter help rooms
           </label>
           <br>
-          <label for="">
-            <input type="checkbox" name="" id=""> Videos
+          <label for="check7">
+            <input type="checkbox" name="check7" id="check7" value="Videos"> Videos
           </label>
           <br>
-          <label for="">
-            <input type="checkbox" name="" id=""> City Meetups
+          <label for="check8">
+            <input type="checkbox" name="check8" id="check8" value="City_Meetups"> City Meetups
           </label>
           <br>
-          <label for="">
-            <input type="checkbox" name="" id=""> Wiki
+          <label for="check9">
+            <input type="checkbox" name="check9" id="check9" value="Wiki"> Wiki
           </label>
           <br>
-          <label for="">
-            <input type="checkbox" name="" id=""> Forum
+          <label for="check10">
+            <input type="checkbox" name="check10" id="check10" value="Forum"> Forum
           </label>
           <br>
-          <label for="">
-            <input type="checkbox" name="" id=""> Additional Courses
+          <label for="check11">
+            <input type="checkbox" name="check11" id="check11" value="Additional Courses"> Additional Courses
           </label>
           <br>
+          </fieldset>
         </div>
       </div>
       <div class="row">
-        <div class="col-6" id="label">
-          <label for="">
-            <p>Any Comments or Suggestions?</p>
-          </label>
+        <div class="col-6 label" >
+          <p>
+            Any Comments or Suggestions?
+          </p>
         </div>
         <div class="col-6">
-          <textarea name="" id="" cols="40" rows="3" placeholder="Enter your comment here..."></textarea>
+          <textarea name="comment-text" id="comment-text" cols="40" rows="3" placeholder="Enter your comment here..."></textarea>
         </div>
       </div>
-      <div class="row" id="button">
-        <button class="btn btn-primary">Submit</button>
+      <div class="row button" >
+        <button class="btn btn-primary" id="submit">Submit</button>
       </div>
-    </form>
+
   </div>
+  </form>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -182,6 +184,7 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>

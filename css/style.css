@@ -1,24 +1,29 @@
 body {
-    background-color: gray;
+    background-color: #79ffeb;
 }
 
 #container {
     background-color: white;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
     margin-bottom: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 5px 5px 10px 5px #000000; 
+    box-shadow: 5px 5px 10px 5px #000000;
 }
 
 #mainTitle {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
 }
 
 #description {
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 10px;    
+    margin-bottom: 10px;  
+    font-family: 'Playfair Display', serif;  
 }
 
 #mainDescription {
@@ -27,18 +32,26 @@ body {
     margin-bottom: 20px;
 }
 
-#label {
+.label {
     text-align: right;
+    font-family: 'Playfair Display', serif;
+}
+
+
+#name-label, #email-label, #number-label {
+    margin-bottom: 10px;
 }
 
 
 
 
 
-
-
-#button {
+.button {
     margin-top: 20px;
     padding-bottom: 20px;
     justify-content: center;
+}
+
+p {
+    font-family: 'Playfair Display', serif;
 }
